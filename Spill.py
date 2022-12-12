@@ -37,7 +37,6 @@ class Rom:
             self.ledetråder.pop(0)
         
         
-        
 
     def SpillRom(self):
         print(self)
@@ -48,6 +47,8 @@ class Rom:
         else:
             self.SkrivUtLedetråd()
 
+        if snake_x<0 or snake_x>screen_width or snake_y<0 or snake_y>screen_height:
+        game_over = True
 SpillOver = False
 Rom1 = Rom("London" or "london", "Hva er hjembyen til huseieren?")
 Rom1.LeggTilLedetråd("På veggen ser du et bilde av Kong Charles")
@@ -60,9 +61,6 @@ while not SpillOver:
     print()
     Rom.CurRom.SpillRom()
     #str()
-
-
-    
 
 
 player = input("Hva tror du svaret på spørsmålet er?   ")
